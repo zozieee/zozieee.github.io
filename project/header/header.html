@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<head>
+		<title>navbar</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="CSS/style.css">
+	</head>
+		<body>
+			<header>
+				
+				<nav>
+				<a class="login/signup buttons" href="#">
+					<img class="logo" src="images/cuteGoat.png" alt="logo"><br>
+					<button>Login</button>
+					<button>Sign up</button><br>
+				</a>
+				</nav>
+				
+				<nav>
+					<a href='#' class="toggle-button">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</a>
+
+				
+					<ul class="nav_links">
+						<li><a href="#">Projects</a></li>
+						<li><a href="#">Forums</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						
+					</ul>
+				</nav>
+				<div>
+					<form action="includes/login.php" method="post">
+					<input type="text" name="mailuid" placeholder="Username/E-mail...">
+					<input type="password" name="pwd" placeholder="Password">
+					<button type="submit" name="login-submit">Login</button>
+					</form>
+					<a href="signup.php">Signup</a>
+					
+					<form action="includes/logout.php" method="post">
+					<button type="submit" name="logout-submit">Logout</button>
+					</form>
+				</div>
+				
+			</header>
+				
+		</body>
+	</html>

@@ -1,0 +1,80 @@
+<?php session_start(); ?>
+
+<html>
+<head>
+<script src="C:\xampp\htdocs\project\script.js" defer></script>
+<!-- 
+	how to add listener for hamburger menu toggle?
+	when active should hide display header as 
+	flex-direction:column, click again to hide menu
+-->
+</head>
+				<a class="left" style="float:left;">
+				<a class="logo" href="/project/index.php"><img class="logo" style="width:35%;" src="images/cuteGoat.png"  ></a>
+
+				<script src="script.js" defer></script>
+
+				<?php
+			
+					if(isset($_SESSION['username'])) 
+					{
+						echo'<a class="welcome text" style="margin:10px;">
+							Welcome '.$_SESSION['username'].'!'.'<br><br></a>';
+						echo '<a class="logout button" href="/project/includes/logout.inc.php">
+							<button>Logout</button></a>';
+						echo '<p class="login-status> 
+							You are logged in!</p>';
+					}
+					else{
+						echo '<a class="login button" href="/project/login.php">
+						<button>Login</button></a>
+						<a class="signup" href="/project/signup.php">
+						<button>Signup</button></a>';
+						echo '<p class="login-status"> You are logged out!</p>';
+					}
+				?>
+				</a>
+				
+				<nav class="navbar">
+					<a href='#' class="toggle-button">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</a>
+					
+					<button class="accordion">Section 1</button>
+					<div class="panel">
+					  <p>Lorem ipsum...</p>
+					</div>
+					
+					<script>
+						var acc = document.getElementsByClassName("accordion");
+						var i;
+
+						for (i = 0; i < acc.length; i++) {
+						  acc[i].addEventListener("click", function() {
+							/* Toggle between adding and removing the "active" class,
+							to highlight the button that controls the panel */
+							this.classList.toggle("active");
+
+							/* Toggle between hiding and showing the active panel */
+							var panel = this.nextElementSibling;
+							if (panel.style.display === "block") {
+							  panel.style.display = "none";
+							} else {
+							  panel.style.display = "block";
+							}
+						  });
+						} 
+					</script>
+
+				
+					<ul class="nav_links">
+						<li><a href="/project/project.php">Projects</a></li>					
+						<li><a href="/project/TGGForums.php">Forums</a></li>
+						<li><a href="/project/About.php">About</a></li>
+						<li><a href="/project/ContactTGG.php">Contact</a></li>
+						
+					</ul>
+				</nav>
+</html>
