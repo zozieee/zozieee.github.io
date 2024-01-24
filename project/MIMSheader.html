@@ -1,0 +1,62 @@
+<?php session_start(); ?>
+
+<html>
+<head>
+<script src="C:\xampp\htdocs\project\script.js" defer></script>
+<!-- 
+	how to add listener for hamburger menu toggle?
+	when active should hide display header as 
+	flex-direction:column, click again to hide menu
+-->
+</head>
+				<a class="left" style="float:left;">
+				<a class="logo" href="/project/index.php"><img class="logo" style="width:35%;" src="images/eastsideQ.jpg"  ></a>
+
+				<script src="script.js" defer></script>
+
+		
+				</a>
+				
+				<nav class="navbar">
+					<a href='#' class="toggle-button">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</a>
+					
+					<button class="accordion">Section 1</button>
+					<div class="panel">
+					  <p>Lorem ipsum...</p>
+					</div>
+					
+					<script>
+						var acc = document.getElementsByClassName("accordion");
+						var i;
+
+						for (i = 0; i < acc.length; i++) {
+						  acc[i].addEventListener("click", function() {
+							/* Toggle between adding and removing the "active" class,
+							to highlight the button that controls the panel */
+							this.classList.toggle("active");
+
+							/* Toggle between hiding and showing the active panel */
+							var panel = this.nextElementSibling;
+							if (panel.style.display === "block") {
+							  panel.style.display = "none";
+							} else {
+							  panel.style.display = "block";
+							}
+						  });
+						} 
+					</script>
+
+				
+					<ul class="nav_links">
+						<li><a href="https://www.academicexcellencematters.com/">Home</a></li>
+						<li><a href="https://www.academicexcellencematters.com/team-3">Symbols</a></li>
+						<li><a href="https://www.academicexcellencematters.com/office-starbucks">Office</a></li>
+						<li><a href="https://www.academicexcellencematters.com/quantum-computing">Quantum</a></li>
+						
+					</ul>
+				</nav>
+</html>
